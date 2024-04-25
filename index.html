@@ -4,51 +4,87 @@
     <meta charset="UTF-8">
     <link rel="icon" href="favicon.ico">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Простая игра на коленке</title>
+    <title>Кликер</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.cdnfonts.com/css/minecraft-4" rel="stylesheet">
                 
 </head>
 <body>
     <div class="game">
-
-        <menu class="shop" hidde>
-
-            <menu class="discoveries">
-
-            </menu>
-
-            <menu class="newEra">
-
-            </menu>
-
-            <menu class="autoResources">
-
-            </menu>
-
-        </menu>
-
         <div class="btn">
-            <button class="btnResources" id="wood">Wood</button>
+            <button class="btnResources" id="wood"  >Wood</button>
             <button class="btnResources" id="stone">Stone</button>
             <button class="btnResources" id="copper">Copper</button>
-            <button class="upgrade">level :  
-                <div id="counterY">0</div>
-                <br>
-                <div>
-                    Cost : 
-                    <div id="counterX">1$</div>
+            <button class="btnResources" onclick="toggleInventory()">Inventory</button>
+            <button class="btnResources" onclick="toggleShop()">Shop</button>
+            <button class="btnResources" onclick="toggleWorkbench()">Workbench</button>
+        </div>
+        <menu class="inventory" id="inventory" hidden>
+            <span class="block-1 blockInventory"  id="blockInventory"></span>
+            
+        </menu>
+        <menu class="workbench" id="workbench" hidden>
+        </menu>
+
+        <menu class="shop" id="shop" hidden>
+            <header>
+                <nav class="navbar">
+                    <ul>
+                        <li><button class="tab"><h3>discoveries</h3></button></li>
+                        <li><button class="tab"><h3>new<br>Era</h3></button></li>
+                        <li><button class="tab"><h3>auto<br>Resources</h3></button></li>
+                    </ul>
+                </nav>
+            </header>
+            <section class="discoveries">
+                <div class="row">
+                    <div class="info">
+                        <h4 class="plank">
+                            <span>Plank</span>
+                            <br>   Cost:
+                            <br>4 woods 
+                            <button onclick="plankBuy()">buy</button>
+                        </h4>    
+
+                        <h4>
+                            <span>Workbench</span>
+                            <br>   Cost:
+                            <br>2 woods
+                            <br>10 planks
+                            <button>buy</button>
+                        </h4>    
+
+                        <h4>
+                            <span>Stick</span>
+                            <br>   Cost:
+                            <br>8 planks
+                            <button>buy</button>
+                        </h4>   
+
+                        <h4>
+                            <span>Wooden pickaxe</span>
+                            <br>   Cost:
+                            <br>15 planks
+                            <br>8 sticks
+                            <button>buy</button>
+                        </h4>     
+                        <h4>
+                            <span>Wooden pickaxe</span>
+                            <br>   Cost:
+                            <br>15 planks
+                            <br>8 sticks
+                            <button>buy</button>
+                        </h4>     
+
+                        </div>
                 </div>
-            </button>
-        </div>
-        <div>
-            Purpose 100$ <br>
-            Balance : 
-            <div id="counter">0$</div>
-        </div>
-        <div id="win"></div>
+                
+            </section>
+        </menu>
+
+        
     </div>
-    <script src="main.js"></script>
-    <script src="shop.js"></script>
+    <script src="resources.js"></script>
+
 </body>
 </html>
