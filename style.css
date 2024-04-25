@@ -1,5 +1,16 @@
 * {
-    font-family: Mintcraft, monospace;
+    font-family: Minecraft, monospace;
+    color: white;
+}
+html {
+
+  background: #223;
+  
+
+}
+:root {
+    --menu-color : #36363d;
+    --dark-menu-color : #2b2b31;
 }
 .game {
     position: absolute;
@@ -27,3 +38,52 @@ button {
     margin: 10px;
     
 }
+
+.shop{
+    background-color: var(--menu-color);
+    min-width: 500px ;
+    min-height: 600px;
+    display: grid;
+    place-content: center;
+    color: white;
+    text-shadow: 0 1px 0 #000;
+    
+    --border-angle: 0turn; 
+    --main-bg: conic-gradient(
+        from var(--border-angle),
+        #213,
+        #112 5%,
+        #112 60%,
+        #213 95%
+      );
+    
+    border: solid 5px transparent;
+    border-radius: 2em;
+    --gradient-border: conic-gradient(from var(--border-angle), transparent 25%, #08f, #f03 99%, transparent);
+    
+    background: 
+      
+      var(--main-bg) padding-box,
+      
+      var(--gradient-border) border-box, 
+      
+      var(--main-bg) border-box;
+    
+    background-position: center center;
+  
+    animation: bg-spin 3s linear infinite;}
+    @keyframes bg-spin {
+      to {
+        --border-angle: 1turn;
+      }
+    }
+  
+
+  
+  
+  @property --border-angle {
+    syntax: "<angle>";
+    inherits: true;
+    initial-value: 0turn;
+  }
+
