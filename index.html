@@ -12,21 +12,20 @@
 <body>
     <div class="game">
         <div class="btn">
-            <button class="btnResources" id="wood"  >Wood</button>
-            <button class="btnResources" id="stone">Stone</button>
-            <button class="btnResources" id="copper">Copper</button>
-            <button class="btnResources" onclick="toggleInventory()">Inventory</button>
-            <button class="btnResources" onclick="toggleShop()">Shop</button>
-            <button class="btnResources" onclick="toggleWorkbench()">Workbench</button>
+            
+            <button class="btnResources" id="ResourcesMenu" onclick="ResourcesMenu()">Resources</button>
+            <button class="btnResources" id="InventoryMenu" onclick="InventoryMenu()">Inventory</button>
+            <button class="btnResources" id="ShopMenu" onclick="ShopMenu()">Shop</button>
+            <button class="btnResources" id="WorkbenchMenu" onclick="WorkbenchMenu()">Workbench</button>
         </div>
-        <menu class="inventory" id="inventory" hidden>
+        <menu class="inventory" id="inventory">
             <span class="block-1 blockInventory"  id="blockInventory"></span>
             
         </menu>
-        <menu class="workbench" id="workbench" hidden>
+        <menu class="workbench" id="workbench">
         </menu>
 
-        <menu class="shop" id="shop" hidden>
+        <menu class="shop" id="shop">
             <header>
                 <nav class="navbar">
                     <ul>
@@ -81,8 +80,11 @@
                 
             </section>
         </menu>
-
-        
+        <menu class="resources" id="resources">
+            <button class="btnResources" id="wood">Wood</button>
+            <button class="btnResources" id="stone">Stone</button>
+            <button class="btnResources" id="copper">Copper</button>
+        </menu>
     </div>
     <script src="resources.js"></script>
 
